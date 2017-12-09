@@ -17,5 +17,12 @@ namespace PPCRental_Upstairs.Controllers
             var p = model.PROPERTies.ToList();
             return View(p);
         }
-      }
+        public ActionResult search(string text)
+        {
+            var p = model.PROPERTies.ToList().Where(x => x.PropertyName.ToUpper().Contains(text.ToUpper())
+               || x.ID.ToString().ToUpper().Contains(text.ToUpper()) || x.Content.ToUpper().Contains(text.ToUpper()));
+
+            return View(p);
+        }
+    }
 }

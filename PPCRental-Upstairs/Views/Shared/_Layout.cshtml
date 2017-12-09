@@ -581,9 +581,7 @@
                                 <li>
                                     <a href="wishlist.html">
                                         Wishlist
-                                    </a>
-                                </li>
-                                <li>
+                                    </a>i>
                                     <a href="404.html">
                                         Error 404
                                     </a>
@@ -597,10 +595,10 @@
                     </ul>
                     <!-- Main menu - end -->
                     <!-- Search - start -->
-                    <div class="topsearch">
-                        <a id="topsearch-btn" class="topsearch-btn" href="@Url.Action("Search","Search")"><i class="fa fa-search"></i></a>
-                        <form class="topsearch-form" action="@Url.Action("Search","Search")" method="post">
-                            <input type="text" placeholder="Search products">
+                    <div class="topsearch">                       
+                        <a id="topsearch-btn" role="search" class="topsearch-btn" href="@Url.Action("search","Home")"><i class="fa fa-search"></i></a>
+                        <form class="topsearch-form" action="@Url.Action("search","Home")" method="post">
+                            <input type="text" placeholder="Search products" name="text">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
